@@ -11,6 +11,8 @@ pipeline {
 
         stage('Build') {
             steps {
+                set M2_HOME=C:\apache-maven-3.8.1
+                SET path=C:\apache-maven-3.8.1\bin%path%
                 // Use a tool such as Maven or Gradle to build the Spring Boot project
                 bat 'mvn clean install'
             }
